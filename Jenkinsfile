@@ -3,7 +3,7 @@ pipeline{
   stages{
     stage('git clone'){
       steps{
-  checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'github-id', url: 'https://github.com/Christjost6/demo-multibranch.git.git']]])   
+  checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'github-id', url: 'https://github.com/Christjost6/demo-multibranch.git.']]])   
       }
     }
     stage('parallele-level'){
